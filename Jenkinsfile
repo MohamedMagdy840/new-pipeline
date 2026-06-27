@@ -16,7 +16,7 @@ pipeline {
         stage('Hello World2') {
             steps {
                 echo 'Hello World2'
-                ech 'Hello World'
+                echo 'Hello World'
             }
         }
         stage('Hello Jenkins2') {
