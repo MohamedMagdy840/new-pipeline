@@ -7,23 +7,13 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('Hello Jenkins') {
+        stage('run script') {
             steps {
-                echo 'Hello Jenkins'
+                sh'''
+                chmod +x hello.sh
+                ./hello.sh
+                '''     
             }
         }
-        
-        stage('Hello World2') {
-            steps {
-                echo 'Hello World2'
-                echo 'Hello World'
-            }
-        }
-        stage('Hello Jenkins2') {
-            steps {
-                echo 'Hello Jenkins'
-            }
-        }
-
     }
 }
